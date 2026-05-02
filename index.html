@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Toad Attack</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar card">
+      <div class="stat"><span>❤️</span><strong id="lives">30</strong></div>
+      <div class="stat"><span>🪙</span><strong id="cash">120</strong></div>
+      <div class="stat"><span>🌊</span><strong id="wave">1/20</strong></div>
+      <div class="stat"><span>🧿</span><strong id="relicCount">0</strong></div>
+    </header>
+
+    <main class="game-wrap">
+      <canvas id="gameCanvas" width="900" height="520" aria-label="Toad Attack game board"></canvas>
+      <aside class="panel card">
+        <h1>🐸 Toad Attack</h1>
+        <div id="selectedInfo" class="selected">Select a tower to place.</div>
+        <div id="towerBar" class="tower-grid"></div>
+        <div class="control-row">
+          <button id="pauseBtn">Pause</button>
+          <button id="speedBtn">x2</button>
+          <button id="nextWaveBtn">Next Wave</button>
+          <button id="restartBtn" class="danger">Restart</button>
+        </div>
+        <div class="legend">
+          <small>Drag or tap to place towers. Hold on map to preview range.</small>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <div id="rewardModal" class="modal hidden">
+    <div class="modal-card card">
+      <h2>Choose a Reward</h2>
+      <div id="rewardCards" class="reward-cards"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
